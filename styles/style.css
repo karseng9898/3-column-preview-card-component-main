@@ -1,0 +1,113 @@
+:root {
+  /* Primary Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* paragraph */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  /* fonts */
+  --big-shoulder: "Big Shoulders Display", cursive;
+  --lexend-deca: "Lexend Deca", sans-serif;
+}
+
+* {
+  font-family: var(--lexend-deca);
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-size: 15px;
+}
+
+.card > h1 {
+  font-family: var(--big-shoulder);
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+
+.card > p {
+  color: var(--transparent-white);
+  font-weight: light;
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  width: 800px;
+  aspect-ratio: 5/3;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.card > button {
+  position: relative;
+  top: 5rem;
+  padding: 0.8em 1.5em;
+  background: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  color: hsla(0, 0%, 100%, 0);
+}
+
+.card.sedan {
+  background: var(--bright-orange);
+}
+
+.card.suv {
+  background: var(--dark-cyan);
+}
+
+.card.luxury {
+  background: var(--very-dark-cyan);
+}
+
+.sedan button {
+  color: var(--bright-orange);
+}
+
+.sedan button:hover {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.suv button {
+  color: var(--dark-cyan);
+}
+
+.suv button:hover {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+.luxury button:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
